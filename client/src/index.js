@@ -12,7 +12,7 @@ import reducers from "./reducers";
 //first argument to createStore is all the reducers we have in our app
 //second argument is initial state of app
 //third argument is for middleware call
-const store = createStore(() => [], {}, applyMiddleware(reduxThunk));
+const store = createStore(reducers, {}, applyMiddleware(reduxThunk));
 
 ReactDOM.render(
   <Provider store={store}>
